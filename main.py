@@ -17,12 +17,11 @@ while(True):
     width = screenSize[1]
     height = screenSize[2]
     randomSeed = np.random(0,1,1)
-    while(x<numMin):
+    while(True):
         time.sleep(60)
-        x+=1
     for i in range(0,200):
-        pyautogui.moveTo(0,i*4)
-    pyautogui.moveTo(1,1)
+        mover.moveTo(0,i*4)
+        mover.moveTo(1,1)
     for i in range(0,3):
-        pyautogui.press("shift")
+        mover.press("shift")
     print("Movement made at {}".format(datetime.now().time()))
